@@ -1,0 +1,58 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i class="fa fa-angle-right"></i>Users</li>
+            </ol>
+            <div class="agile-grids">
+                <!-- tables -->
+                <div class="agile-tables">
+                    <h3>Users List</h3>
+                    <table id="table-two-axis" class="two-axis">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phonenumber</th>
+                                <th>Role</th>
+                                <th>Designation</th>
+                                <th>Department</th>
+                                <th>Created On</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of usersList">
+                                <td>{{ item.firstname }} {{ item.lastname }}</td>
+                                <td>{{ item.email }}</td>
+                                <td>{{ item.phonenumber }}</td>
+                                <td>{{ item.role }}</td>
+                                <td>{{ item.designation }}</td>
+                                <td>{{ item.department }}</td>
+                                <td>{{ item.created_at | date }}</td>
+                                <td>{{ item.status }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //tables -->
+            </div>
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>
