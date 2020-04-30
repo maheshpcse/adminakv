@@ -1,0 +1,42 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i
+                        class="fa fa-angle-right"></i><a [routerLink]="[ '/users' ]">Users</a><i
+                        class="fa fa-angle-right"></i>Settings</li>
+            </ol>
+            <div class="asked">
+                <div class="questions text-center">
+                    <h2 *ngIf="finalObj.configure == 'Blocked'">Block User</h2>
+                    <p *ngIf="finalObj.configure == 'Blocked'">Are you sure want to block this user ?</p>
+                    <h2 *ngIf="finalObj.configure == 'Unblocked'">Unblock User</h2>
+                    <p *ngIf="finalObj.configure == 'Unblocked'">Are you sure want to unblock this user ?</p>
+                    <h2 *ngIf="finalObj.configure == 'Delete'">Delete User</h2>
+                    <p *ngIf="finalObj.configure == 'Delete'">Are you sure want to delete this user ?</p>
+                    <div class="w3-container w3-padding">
+                        <button class="w3-button w3-center w3-white w3-border update-btn"
+                            (click)="updateUser()">Yes</button>
+                        <button class="w3-button w3-center w3-teal w3-border close-btn" (click)="resetUser()">No</button>
+                    </div>
+                </div>
+            </div>
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

@@ -6,7 +6,8 @@
             <app-header-nav></app-header-nav>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i class="fa fa-angle-right"></i>Users</li>
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i
+                        class="fa fa-angle-right"></i>Users</li>
             </ol>
             <div class="agile-grids">
                 <!-- tables -->
@@ -23,6 +24,7 @@
                                 <th>Department</th>
                                 <th>Created On</th>
                                 <th>Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +36,50 @@
                                 <td>{{ item.designation }}</td>
                                 <td>{{ item.department }}</td>
                                 <td>{{ item.created_at | date }}</td>
-                                <td>{{ item.status }}</td>
+                                <!-- <td>{{ item.status }}</td> -->
+                                <td>
+                                    <span *ngIf="item.status == 'Active'"><i class="fa fa-check-circle mt-2"></i>
+                                        {{ item.status }}</span>
+                                    <span *ngIf="item.status == 'Inactive'"><i
+                                            class="fa fa-times-circle inactive mt-2"></i>
+                                        {{ item.status }}</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="dropdown">
+                                        <a href="" title="" class="btn btn-default" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v dropdown" aria-hidden="true"></i>
+                                        </a>
+                                        <ul class="dropdown-menu float-right">
+                                            <li>
+                                                <a title="" (click)="editUser(item,'view')">
+                                                    <i class="fa fa-eye icon_9"></i>
+                                                    View
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" *ngIf="item.configure == 'Unblocked'"
+                                                    (click)="editUser(item,'block')">
+                                                    <i class="fa fa-lock icon_9"></i>
+                                                    Block
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" *ngIf="item.configure == 'Blocked'"
+                                                    (click)="editUser(item,'unblock')">
+                                                    <i class="fa fa-key icon_9"></i>
+                                                    Unblock
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" (click)="editUser(item,'delete')">
+                                                    <i class="fa fa-trash icon_9"></i>
+                                                    Delete
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -56,3 +101,130 @@
     <app-sidemenu></app-sidemenu>
     <div class="clearfix"></div>
 </div>
+
+<!-- View Modal -->
+<div class="w3-container">
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container w3-teal p-2">
+                <!-- <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span> -->
+                <span class="w3-button w3-display-topright" (click)="resetUser()">&times;</span>
+                <h3>View User</h3>
+            </header>
+            <div class="w3-container">
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <img src="" alt="" class="img-responsive">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="primary-text">
+                                <label for="firstname"><span class="ml-2"><i class="fa fa-user"></i>
+                                        {{ userOne.firstname }}</span></label>
+                                <span class="ml-1">{{ userOne.lastname }}</span>
+                                <p class="design ml-2"><i class="fa fa-briefcase"></i><span
+                                        class="ml-2">{{ userOne.designation }}</span>
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table id="table-two-axis" class="two-axis">
+                                        <tr>
+                                            <th><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</th>
+                                            <td>{{userOne.email}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <th><i class="fa fa-phone" aria-hidden="true"></i> Phone</th>
+                                            <td>{{userOne.phonenumber}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <th><i class="fa fa-calendar" aria-hidden="true"></i> Created On</th>
+                                            <td>{{userOne.created_at | date}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <th><i class="fa fa-check-circle" aria-hidden="true"></i> Status</th>
+                                            <td class="success" *ngIf="userOne.status == 'Active'">{{userOne.status}}
+                                            </td>
+                                            <td class="danger" *ngIf="userOne.status == 'Inactive'">{{userOne.status}}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table>
+                                        <tr>
+                                            <th><i class="fa fa-graduation-cap" aria-hidden="true"></i> Designation</th>
+                                            <td>{{userOne.designation}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <th><i class="fa fa-industry" aria-hidden="true"></i> Department</th>
+                                            <td>{{userOne.department}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr class="active-details">
+                                            <th><i class="fa fa-code-fork" aria-hidden="true"></i> Role</th>
+                                            <td>{{userOne.role}}</td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <th><i class="fa fa-cog" aria-hidden="true"></i> Configure</th>
+                                            <td class="danger" *ngIf="userOne.configure == 'Blocked'">
+                                                {{userOne.configure}}</td>
+                                            <td class="success" *ngIf="userOne.configure == 'Unblocked'">
+                                                {{userOne.configure}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!-- <footer class="w3-container w3-teal">
+            <div class="w3-container w3-teal w3-padding">
+            </div>
+          </footer> -->
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+<!-- Edit Block/Unblock User Modal -->
+<div class="w3-container">
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container w3-teal p-2">
+                <span class="w3-button w3-display-topright" (click)="resetUser()">&times;</span>
+                <h3 *ngIf="!hideBlock">Block User</h3>
+                <h3 *ngIf="hideBlock">Unblock User</h3>
+            </header>
+            <div class="w3-container">
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-12" *ngIf="!hideBlock">
+                            Are you sure want to block this user?
+                        </div>
+                        <div class="col-md-12" *ngIf="hideBlock">
+                            Are you sure want to unblock this user?
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <footer class="w3-container w3-teal">
+                <div class="w3-container w3-teal w3-padding">
+                    <button class="w3-button w3-right w3-white w3-border update-btn" (click)="updateUser()">Yes</button>
+                    <button class="w3-button w3-right w3-teal w3-border close-btn" (click)="resetUser()">No</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->

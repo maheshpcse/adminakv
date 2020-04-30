@@ -9,8 +9,86 @@
                 <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a> <i
                         class="fa fa-angle-right"></i>Profile</li>
             </ol>
-            <div class="agile-grids">
-                Admin Profile View...
+            <div class="agile-grids asked">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <!-- <div class="w3-container w3-cont"> -->
+                            <!-- <header class="w3-container w3-light-gray">
+                                    <h3><i class="fa fa-check-circle mt-2"></i> {{ username }}</h3>
+                                </header> -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-3 p-3">
+                                        <div class="w3-container">
+                                            <img [src]="imgSrc" alt="_profile" class="img-responsive rounded-circle"
+                                                width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 p-2">
+                                        <div class="primary-text">
+                                            <i class="fa fa-user"></i><span class="ml-2 name">{{ firstname }}
+                                                {{ lastname }}</span>
+                                            <p class="design"><i class="fa fa-briefcase"></i><span
+                                                    class="ml-2 desig">{{ designation }}</span></p>
+                                        </div>
+                                        <hr>
+                                        <!-- <div class="w3-container"> -->
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <table id="table-two-axis" class="two-axis">
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                                                Email</th>
+                                                            <td>{{email}}</td>
+                                                        </tr>
+                                                        <br>
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-phone" aria-hidden="true"></i>
+                                                                Phone</th>
+                                                            <td>{{phoneNumber}}</td>
+                                                        </tr>
+                                                        <br>
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                Created On</th>
+                                                            <td>{{created_on | date}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <table id="table-two-axis" class="two-axis">
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                                                Designation</th>
+                                                            <td>{{designation}}</td>
+                                                        </tr>
+                                                        <br>
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-industry" aria-hidden="true"></i>
+                                                                Department</th>
+                                                            <td>{{department}}</td>
+                                                        </tr>
+                                                        <br>
+                                                        <tr class="active-details">
+                                                            <th><i class="fa fa-code-fork" aria-hidden="true"></i>
+                                                                Role</th>
+                                                            <td>{{role}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--inner block start here-->
             <div class="inner-block">

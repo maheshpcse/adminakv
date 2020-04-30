@@ -9,6 +9,8 @@ import { InboxComponent } from './inbox/inbox.component';
 import { UsersViewComponent } from './users/users-view/users-view.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { SettingsComponent } from './admin/settings/settings.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { UserSettingsComponent } from './users/user-settings/user-settings.component';
 
 
 const routes: Routes = [
@@ -31,14 +33,24 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'messages',
+    canActivate: [AuthGuardService],
+    component: InboxComponent
+  },
+  {
     path: 'users',
     canActivate: [AuthGuardService],
     component: UsersViewComponent
   },
   {
-    path: 'messages',
+    path: 'user/profile',
     canActivate: [AuthGuardService],
-    component: InboxComponent
+    component: UserProfileComponent
+  },
+  {
+    path: 'user/settings',
+    canActivate: [AuthGuardService],
+    component: UserSettingsComponent
   },
   {
     path: 'admin/profile',

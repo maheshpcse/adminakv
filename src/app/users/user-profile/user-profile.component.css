@@ -21,9 +21,9 @@ h3 {
   border-right: 1px solid #dee2e6;
 }
 
-.fa-check-circle {
+/* .fa-check-circle {
   color: #6dab25;
-}
+} */
 
 .fa-user-o {
   font-size: 1.5rem !important;
@@ -83,7 +83,7 @@ h3 {
   overflow: scroll;
 }
 
-.success {
+/* .success {
   text-align: center;
   color: #6dab25;
   border: 1px solid #6dab25;
@@ -95,8 +95,17 @@ h3 {
   color: #c54040;
   border: 1px solid #c54040;
   border-radius: 20px;
-}
+} */
 
 a {
   cursor: pointer;
+}
+
+.name {
+  /* font-size: 1.5rem; */
+  margin-left: 13px;
+}
+
+.desig {
+  margin-left: 10px;
 }

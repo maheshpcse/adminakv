@@ -1,0 +1,109 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i
+                        class="fa fa-angle-right"></i><a [routerLink]="[ '/users' ]">Users</a><i
+                        class="fa fa-angle-right"></i>Profile</li>
+            </ol>
+            <div class="agile-grids asked">
+                <!-- tables -->
+                <div class="w3-container">
+                    <div class="container-fluid">
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <img src="../../../assets/images/admin-avatar.png" alt="_userprofile"
+                                    class="img-responsive rounded-circle" width="200" height="200">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="primary-text">
+                                    <i class="fa fa-user"></i><span class="ml-2 name">{{ userOne.firstname }}
+                                        {{ userOne.lastname }}</span>
+                                    <p class="design ml-2"><i class="fa fa-briefcase"></i><span
+                                            class="ml-2 desig">{{ userOne.designation }}</span>
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <table id="table-two-axis" class="two-axis">
+                                            <tr>
+                                                <th><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</th>
+                                                <td>{{userOne.email}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <th><i class="fa fa-phone" aria-hidden="true"></i> Phone</th>
+                                                <td>{{userOne.phonenumber}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <th><i class="fa fa-calendar" aria-hidden="true"></i> Created On</th>
+                                                <td>{{userOne.created_at | date}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <th><i class="fa fa-check-circle" aria-hidden="true"></i> Status</th>
+                                                <td class="success" *ngIf="userOne.status == 'Active'">
+                                                    {{userOne.status}}
+                                                </td>
+                                                <td class="danger" *ngIf="userOne.status == 'Inactive'">
+                                                    {{userOne.status}}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table id="table-two-axis" class="two-axis">
+                                            <tr>
+                                                <th><i class="fa fa-graduation-cap" aria-hidden="true"></i> Designation
+                                                </th>
+                                                <td>{{userOne.designation}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <th><i class="fa fa-industry" aria-hidden="true"></i> Department</th>
+                                                <td>{{userOne.department}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr class="active-details">
+                                                <th><i class="fa fa-code-fork" aria-hidden="true"></i> Role</th>
+                                                <td>{{userOne.role}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <th><i class="fa fa-cog" aria-hidden="true"></i> Configure</th>
+                                                <td class="danger" *ngIf="userOne.configure == 'Blocked'">
+                                                    {{userOne.configure}}</td>
+                                                <td class="success" *ngIf="userOne.configure == 'Unblocked'">
+                                                    {{userOne.configure}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <!-- //tables -->
+            </div>
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,43 @@
+h3 {
+  color: #1668af;
+  font-size: 1rem;
+}
+
+/* .w3-cont {
+    background-color: white !important;
+} */
+
+.fa-check-circle {
+  color: #6dab25;
+}
+
+.fa-user, .fa-briefcase {
+  margin-left: 10px;
+}
+
+.primary-text {
+  border-left: 5px solid #1668af;
+  font-size: 1.5rem;
+}
+
+.primary-text:hover {
+  background-color: #dee2e6;
+}
+
+.design {
+  color: #6dab25;
+  font-size: 0.9rem;
+}
+
+/* .active-details:hover {
+  border-left: 2px solid #1668af;
+  background-color: #dee2e6;
+} */
+
+.name {
+  margin-left: 10px;
+}
+
+.desig {
+  margin-left: 15px;
+}

@@ -24,6 +24,8 @@ import { InboxComponent } from './inbox/inbox.component';
 import { UsersViewComponent } from './users/users-view/users-view.component';
 import { ProfileComponent } from './admin/profile/profile.component';
 import { SettingsComponent } from './admin/settings/settings.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { UserSettingsComponent } from './users/user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SettingsComponent } from './admin/settings/settings.component';
     InboxComponent,
     UsersViewComponent,
     ProfileComponent,
-    SettingsComponent
+    SettingsComponent,
+    UserProfileComponent,
+    UserSettingsComponent
   ],
   imports: [
     BrowserModule,
