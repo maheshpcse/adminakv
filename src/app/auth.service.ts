@@ -64,6 +64,14 @@ export class AuthService {
     return this.http.post(ApiService.API.FORGOT_PASSWORD, data);
   }
 
+  changeUsername(data) {
+    return this.http.post(ApiService.API.CHANGE_USERNAME, data);
+  }
+
+  changePassword(data) {
+    return this.http.post(ApiService.API.CHANGE_PASSWORD, data);
+  }
+
   uploadSingle(data) {
     return this.http.post<any>(ApiService.API.UPLOAD_SINGLE_IMAGE, data);
   }

@@ -25,6 +25,7 @@ export class ApiService {
     UPLOAD_SINGLE_IMAGE: environment.apiUrl + '/uploadsingle',
     UPLOAD_MULTIPLE_IMAGES: environment.apiUrl + '/uploadmultiple',
     CHANGE_PASSWORD: environment.apiUrl + '/changepassword',
+    CHANGE_USERNAME: environment.apiUrl + '/changeusername',
     SEND_MESSAGE: environment.apiUrl + '/sendmessage',
     UPDATE_USER_STATUS: environment.apiUrl + '/updateuserstatus',
 
@@ -33,6 +34,10 @@ export class ApiService {
 
     // CONFIGURATION API URL's
     GET_MODULE_CONFIGURATIONS: environment.apiUrl + '/getConfigurations',
-    UPDATE_MODULE_CONFIGURATIONS: environment.apiUrl + '/updateConfigurations'
+    UPDATE_MODULE_CONFIGURATIONS: environment.apiUrl + '/updateConfigurations',
+
+    // PROJECT API URL'S
+    GET_PROJECT_LIST: environment.apiUrl + '/getProjects',
+    ADD_PROJECT: environment.apiUrl + '/addProject'
   }
 }

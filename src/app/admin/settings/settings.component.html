@@ -22,12 +22,12 @@
                                 <div class="vali-form">
                                     <div class="col-md-6 form-group1 form-last">
                                         <label class="control-label">Username</label>
-                                        <input type="text" placeholder="Lastname" required="">
+                                        <input type="text" placeholder="Username" required="" name="username" [(ngModel)]="username">
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary" (click)="changeUsername()">Submit</button>
                                     <button type="reset" class="btn btn-default">Reset</button>
                                 </div>
                                 <div class="clearfix"> </div>
@@ -43,16 +43,16 @@
                             <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">Create a password</label>
-                                    <input type="password" placeholder="Create a password" required="">
+                                    <input type="password" placeholder="Create a password" required="" name="password" [(ngModel)]="password">
                                 </div>
                                 <div class="col-md-6 form-group1 form-last">
                                     <label class="control-label">Repeated password</label>
-                                    <input type="password" placeholder="Repeated password" required="">
+                                    <input type="password" placeholder="Repeated password" required="" name="password1" [(ngModel)]="password1">
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="col-md-12 form-group">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary" (click)="changePassword()">Submit</button>
                                 <button type="reset" class="btn btn-default">Reset</button>
                             </div>
                             <div class="clearfix"> </div>

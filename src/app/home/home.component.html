@@ -11,7 +11,7 @@
             <!--four-grids here-->
             <div class="four-grids">
                 <div class="col-md-3 four-grid">
-                    <div class="four-agileits four-view" (click)="viewList()">
+                    <div class="four-agileits four-view" (click)="viewList('users')">
                         <div class="icon">
                             <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
                         </div>
@@ -37,13 +37,14 @@
                     </div>
                 </div>
                 <div class="col-md-3 four-grid">
-                    <div class="four-w3ls four-view">
+                    <div class="four-w3ls four-view" (click)="viewList('projects')">
                         <div class="icon">
                             <i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
                         </div>
                         <div class="four-text">
                             <h3>Projects</h3>
-                            <h4>5</h4>
+                            <h4 *ngIf="hideLen">{{ projects.length }}</h4>
+                            <div class="lds-dual-ring" *ngIf="spinner"></div>
 
                         </div>
 

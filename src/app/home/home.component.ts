@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import { SharedService } from '../shared.service';
 import * as _ from 'underscore';
 import * as moment from 'moment';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'app-home',
@@ -20,16 +21,19 @@ export class HomeComponent implements OnInit {
   userOne:any = {};
   role: any = sessionStorage.getItem('role');
   currentMonth: any = moment(new Date()).format('MMMM YYYY');
+  projects: any = [];
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private authService: AuthService,
+    public settingService: SettingsService,
     public sharedService: SharedService
   ) { }
 
   ngOnInit() {
     this.getUsersList();
+    this.getProjectList();
   }
 
   getUsersList() {
@@ -50,7 +54,26 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  viewList() {
-    this.router.navigate(['/users']);
+  viewList(page: any) {
+    if(page == 'users') {
+      this.router.navigate(['/users']);
+    } else if (page == 'projects') {
+      this.router.navigate(['/projects']);
+    }
+  }
+
+  getProjectList() {
+    this.spinner = true;
+    this.settingService.getProjectList().subscribe(res => {
+      if(res['success'] == true) {
+        console.log('Get all project list', res);
+        this.projects = res['data'];
+        this.spinner = false;
+        this.hideLen = true;
+      } else {
+        console.log('Unable to get project list');
+        this.spinner = true;
+      }
+    })
   }
 }

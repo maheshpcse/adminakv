@@ -26,6 +26,8 @@ import { ProfileComponent } from './admin/profile/profile.component';
 import { SettingsComponent } from './admin/settings/settings.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { UserSettingsComponent } from './users/user-settings/user-settings.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { AddProjectComponent } from './projects/add-project/add-project.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { UserSettingsComponent } from './users/user-settings/user-settings.compo
     ProfileComponent,
     SettingsComponent,
     UserProfileComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    ProjectListComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,

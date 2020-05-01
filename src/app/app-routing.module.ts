@@ -11,6 +11,8 @@ import { ProfileComponent } from './admin/profile/profile.component';
 import { SettingsComponent } from './admin/settings/settings.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { UserSettingsComponent } from './users/user-settings/user-settings.component';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { AddProjectComponent } from './projects/add-project/add-project.component';
 
 
 const routes: Routes = [
@@ -36,6 +38,16 @@ const routes: Routes = [
     path: 'messages',
     canActivate: [AuthGuardService],
     component: InboxComponent
+  },
+  {
+    path: 'projects',
+    canActivate: [AuthGuardService],
+    component: ProjectListComponent
+  },
+  {
+    path: 'project/add',
+    canActivate: [AuthGuardService],
+    component: AddProjectComponent
   },
   {
     path: 'users',

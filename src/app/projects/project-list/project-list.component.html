@@ -1,0 +1,80 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a> <i
+                        class="fa fa-angle-right"></i>Projects</li>
+            </ol>
+            <div class="agile3-grids asked">
+                <!-- grids -->
+                <div class="grids questions">
+                    <h3>ACADEMIC PROJECT LIST : <span class="float-right"><button type="submit" class="btn btn-primary"
+                                (click)="addProject()">
+                                <i class="fa fa-plus"></i> ADD PROJECT</button></span></h3>
+                    <br>
+                    <ul>
+                        <li>
+                            <input type="checkbox" checked>
+                            <i></i>
+                            <h2>E-DONATOR</h2>
+                            <p> Developed a system to provide to the people need of blood. Using this Blodd Bank system
+                                can search blood group available which they are needed. They can check it online using
+                                our blood bank website.</p>
+                        </li>
+                        <li>
+                            <input type="checkbox" checked>
+                            <i></i>
+                            <h2>TRADEWIN</h2>
+                            <p> Developed online classified site which act as a platform For connecting buyers and
+                                sellers by posting a free ad On their website. It operates as a national online classfie
+                                -ds marketplace for used goods including cars, bikes etc.</p>
+                        </li>
+                        <li>
+                            <input type="checkbox" checked>
+                            <i></i>
+                            <h2>COURSEMAN</h2>
+                            <p> Developed online site for courses such as Full stack, Devops, etc, to easily access by
+                                the students and they can choose whatever they select by choosing the course and getting
+                                courses information easily by this site.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grids questions">
+                    <h3>COMPANY PROJECT LIST : <span class="float-right"><button type="submit" class="btn btn-primary"
+                                (click)="addProject()">
+                                <i class="fa fa-plus"></i> ADD PROJECT</button></span></h3>
+                    <br>
+                    <ul>
+                        <li>
+                            <input type="checkbox" checked>
+                            <i></i>
+                            <h2>MACHINE HEALTH</h2>
+                            <p> Developed a system to provide to the people need of blood. Using this Blodd Bank system
+                                can search blood group available which they are needed. They can check it online using
+                                our blood bank website.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //grids -->
+            </div>
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

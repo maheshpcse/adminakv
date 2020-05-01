@@ -1,0 +1,99 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a> <i
+                        class="fa fa-angle-right"></i><a [routerLink]="[ '/projects' ]">Projects</a> <i
+                        class="fa fa-angle-right"></i>Add Project</li>
+            </ol>
+
+            <div class="validation-system">
+
+                <div class="validation-form">
+                    <!---->
+
+                    <form>
+                        <div class="col-md-12 form-group2 group-mail">
+                            <label class="control-label">Type of Project</label>
+                            <select name="project_type" [(ngModel)]="project_type">
+                                <option value="" disabled>Select :</option>
+                                <option>Academic</option>
+                                <option>Company</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="col-md-12 form-group1 group-mail">
+                            <label class="control-label">Project Title</label>
+                            <input type="text" placeholder="title" required="" name="project_title"
+                                [(ngModel)]="project_title">
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="col-md-12 form-group1 group-mail">
+                            <label class="control-label">Organization</label>
+                            <input type="text" placeholder="organization" required="" name="organization"
+                                [(ngModel)]="organization">
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="vali-form">
+                            <div class="col-md-6 form-group1">
+                                <label class="control-label">Start Date</label>
+                                <input type="date" placeholder="start date" required="" name="startDate"
+                                    [(ngModel)]="startDate">
+                            </div>
+                            <div class="col-md-6 form-group1 form-last">
+                                <label class="control-label">End Date</label>
+                                <input type="date" placeholder="end date" required="" name="endDate"
+                                    [(ngModel)]="endDate">
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="col-md-12 form-group1 ">
+                            <label class="control-label">Description</label>
+                            <textarea placeholder="Write something......" required="" name="description"
+                                [(ngModel)]="description"></textarea>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="col-md-12 form-group1 group-mail">
+                            <label class="control-label">Project Role</label>
+                            <textarea placeholder="Write something......" required="" name="project_role"
+                                [(ngModel)]="project_role"></textarea>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="col-md-12 form-group1 group-mail">
+                            <label class="control-label">Technology Used</label>
+                            <textarea placeholder="Write something......" required="" name="technologies"
+                                [(ngModel)]="technologies"></textarea>
+                        </div>
+                        <div class="clearfix"> </div>
+
+                        <div class="col-md-12 form-group">
+                            <button type="submit" class="btn btn-primary" (click)="addProject()">Submit</button>
+                            <button type="reset" class="btn btn-default">Reset</button>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </form>
+
+                    <!---->
+                </div>
+
+            </div>
+
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

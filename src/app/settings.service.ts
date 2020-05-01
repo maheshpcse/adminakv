@@ -24,4 +24,12 @@ export class SettingsService {
   updatedUserStatus(data: any) {
     return this.http.post(ApiService.API.UPDATE_USER_STATUS, data);
   }
+
+  getProjectList() {
+    return this.http.get(ApiService.API.GET_PROJECT_LIST);
+  }
+
+  addProject(data: any) {
+    return this.http.post(ApiService.API.ADD_PROJECT, data);
+  }
 }
