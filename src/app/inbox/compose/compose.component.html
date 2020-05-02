@@ -1,0 +1,75 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a> <i
+                        class="fa fa-angle-right"></i><a [routerLink]="[ '/inbox' ]">Inbox</a> <i
+                        class="fa fa-angle-right"></i>Compose</li>
+            </ol>
+
+            <!--grid-->
+            <div class="asked">
+                <div class="questions">
+                    <h3>Message compose :</h3>
+                    <div class="grid-form">
+                        <!----->
+                        <div class="grid-form1">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label hor-form">To :</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+                                            name="email_To" [(ngModel)]="email_To">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSubject3" class="col-sm-2 control-label hor-form">Subject :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputSubject3" placeholder="Subject"
+                                            name="subject" [(ngModel)]="subject">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputMessage3" class="col-sm-2 control-label hor-form">Message :</label>
+                                    <div class="col-sm-10">
+                                        <textarea type="text" rows="10" class="form-control" id="inputMessage3"
+                                            placeholder="Message" name="message" [(ngModel)]="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-primary" (click)="sendNewMessage('sent')">
+                                            <i class="fa fa-send"></i> Send
+                                        </button>
+                                        <button type="submit" class="btn btn-success" (click)="sendNewMessage('draft')">
+                                            <i class="fa fa-save"></i> Save As Draft</button>
+                                        <button type="reset" class="btn btn-default" (click)="goToHome()">Discard</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+            <!--//grid-->
+            
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

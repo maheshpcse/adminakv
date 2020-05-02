@@ -1,0 +1,37 @@
+<div class="page-container">
+    <!--/content-inner-->
+    <div class="left-content">
+        <div class="mother-grid-inner">
+            <!--header start here-->
+            <app-header-nav></app-header-nav>
+            <!--heder end here-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a> <i
+                        class="fa fa-angle-right"></i><a [routerLink]="[ '/inbox' ]">Inbox</a> <i
+                        class="fa fa-angle-right"></i>View message</li>
+            </ol>
+            <div class="asked">
+                <!-- grids -->
+                <div class="questions">
+                    <h3>{{ message.subject }}</h3>
+                    <div class="vali-form">{{ message.message }}</div>
+                    <br>
+                    <button type="submit" class="btn btn-default">Resend</button>
+                </div>
+                <!-- //grids -->
+            </div>
+            <!--inner block start here-->
+            <div class="inner-block">
+
+            </div>
+            <!--inner block end here-->
+            <!--copy rights start here-->
+            <app-footer></app-footer>
+            <!--COPY rights end here-->
+        </div>
+    </div>
+    <!--//content-inner-->
+    <!--/sidebar-menu-->
+    <app-sidemenu></app-sidemenu>
+    <div class="clearfix"></div>
+</div>

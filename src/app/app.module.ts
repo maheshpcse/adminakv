@@ -28,6 +28,9 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
 import { UserSettingsComponent } from './users/user-settings/user-settings.component';
 import { ProjectListComponent } from './projects/project-list/project-list.component';
 import { AddProjectComponent } from './projects/add-project/add-project.component';
+import { ComposeComponent } from './inbox/compose/compose.component';
+import { MailService } from './mail.service';
+import { MessageViewComponent } from './inbox/message-view/message-view.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { AddProjectComponent } from './projects/add-project/add-project.componen
     UserProfileComponent,
     UserSettingsComponent,
     ProjectListComponent,
-    AddProjectComponent
+    AddProjectComponent,
+    ComposeComponent,
+    MessageViewComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +69,7 @@ import { AddProjectComponent } from './projects/add-project/add-project.componen
     AuthService,
     AuthGuardService,
     SettingsService,
+    MailService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]

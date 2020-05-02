@@ -36,8 +36,12 @@ export class ApiService {
     GET_MODULE_CONFIGURATIONS: environment.apiUrl + '/getConfigurations',
     UPDATE_MODULE_CONFIGURATIONS: environment.apiUrl + '/updateConfigurations',
 
-    // PROJECT API URL'S
+    // PROJECT API URL's
     GET_PROJECT_LIST: environment.apiUrl + '/getProjects',
-    ADD_PROJECT: environment.apiUrl + '/addProject'
+    ADD_PROJECT: environment.apiUrl + '/addProject',
+
+    // INBOX API URL's
+    SEND_NEW_MESSAGE: environment.apiUrl + '/sendMessage',
+    REVEIVE_MESSAGES: environment.apiUrl + '/receiveMessages'
   }
 }

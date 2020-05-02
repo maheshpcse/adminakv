@@ -6,28 +6,35 @@
             <app-header-nav></app-header-nav>
             <!--heder end here-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i class="fa fa-angle-right"></i>Inbox</li>
+                <li class="breadcrumb-item"><a [routerLink]="[ '/dashboard' ]">Home</a><i
+                        class="fa fa-angle-right"></i>Inbox</li>
             </ol>
             <div class="inbox-mail">
                 <div class="col-md-4 compose w3layouts">
 
-                    <h2>Compose</h2>
+                    <h2 (click)="sendMessage()">Compose</h2>
                     <nav class="nav-sidebar">
                         <ul class="nav tabs">
                             <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="true"><i
-                                        class="fa fa-inbox"></i>Inbox <span>9</span>
+                                        class="fa fa-inbox"></i>Inbox <span>5</span>
                                     <div class="clearfix"></div>
                                 </a></li>
                             <li class=""><a href="#tab2" data-toggle="tab" aria-expanded="false"><i
-                                        class="fa fa-paper-plane-o"></i>Sent</a></li>
+                                        class="fa fa-paper-plane-o"></i>Sent <span>{{ sentMsgs.length }}</span>
+                                    <div class="clearfix"></div>
+                                </a></li>
                             <li class=""><a href="#tab3" data-toggle="tab" aria-expanded="false"><i
-                                        class="fa fa-star-o"></i>Important</a></li>
+                                        class="fa fa-star-o"></i>Important <span>3</span>
+                                    <div class="clearfix"></div>
+                                </a></li>
                             <li class=""><a href="#tab4" data-toggle="tab" aria-expanded="false"><i
-                                        class="fa fa-pencil-square-o"></i>Draft <span>6</span>
+                                        class="fa fa-pencil-square-o"></i>Draft <span>{{ draftMsgs.length }}</span>
                                     <div class="clearfix"></div>
                                 </a></li>
                             <li class=""><a href="#tab5" data-toggle="tab" aria-expanded="false"><i
-                                        class="fa fa-trash-o"></i>Delete</a></li>
+                                        class="fa fa-trash-o"></i>Delete <span>2</span>
+                                    <div class="clearfix"></div>
+                                </a></li>
                         </ul>
                     </nav>
 
@@ -219,139 +226,6 @@
                                                 <i class="fa fa-star-half-o icon-state-warning"></i>
                                             </td>
                                         </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in5.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 3 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in6.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="fam">Family</span>
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in7.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in8.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in9.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in10.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="mar">Market</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in11.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -445,116 +319,21 @@
 
                                 </div>
                                 <table class="table">
-                                    <tbody>
+                                    <tbody *ngFor="let item of sentMsgs">
 
                                         <tr class="table-row">
                                             <td class="table-img">
                                                 <img src="../../assets/images/in1.jpg" alt="">
                                             </td>
                                             <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
+                                                <h6> {{ item.name }}</h6>
+                                                <p>{{ item.message }}</p>
                                             </td>
                                             <td>
                                                 <span class="mar">Market</span>
                                             </td>
                                             <td class="march">
-                                                in 5 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in2.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="work">work</span>
-                                            </td>
-                                            <td class="march">
-                                                in 5 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in3.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="fam">Family</span>
-                                            </td>
-                                            <td class="march">
-                                                in 4 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in4.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 4 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in5.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 3 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in6.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="fam">Family</span>
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
+                                                {{ item.sent_time }}
                                             </td>
 
                                             <td>
@@ -714,63 +493,6 @@
                                                 <i class="fa fa-star-half-o icon-state-warning"></i>
                                             </td>
                                         </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in9.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in10.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="mar">Market</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in11.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -864,123 +586,33 @@
 
                                 </div>
                                 <table class="table">
-                                    <tbody>
+                                    <tbody *ngFor="let item of draftMsgs">
                                         <tr class="table-row">
                                             <td class="table-img">
                                                 <img src="../../assets/images/in.jpg" alt="">
                                             </td>
                                             <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
+                                                <h6> {{ item.name }}</h6>
+                                                <p>{{ item.message }}</p>
                                             </td>
                                             <td>
                                                 <span class="fam">Family</span>
                                             </td>
                                             <td class="march">
-                                                in 5 days
+                                                {{ item.sent_time }}
                                             </td>
 
                                             <td>
                                                 <i class="fa fa-star-half-o icon-state-warning"></i>
 
                                             </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in1.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
+                                            <td>
+                                                <button class="btn btn-default" (click)="viewMessage(item)">View</button>
                                             </td>
                                             <td>
-                                                <span class="mar">Market</span>
-                                            </td>
-                                            <td class="march">
-                                                in 5 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
+                                                <button class="btn btn-primary">Resend</button>
                                             </td>
                                         </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in2.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="work">work</span>
-                                            </td>
-                                            <td class="march">
-                                                in 5 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in3.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="fam">Family</span>
-                                            </td>
-                                            <td class="march">
-                                                in 4 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in4.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 4 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in5.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 3 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -1109,85 +741,6 @@
                                             </td>
                                             <td class="march">
                                                 in 4 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in5.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-
-                                            </td>
-                                            <td class="march">
-                                                in 3 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in7.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 2 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in10.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="mar">Market</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
-                                            </td>
-
-                                            <td>
-                                                <i class="fa fa-star-half-o icon-state-warning"></i>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row">
-                                            <td class="table-img">
-                                                <img src="../../assets/images/in11.jpg" alt="">
-                                            </td>
-                                            <td class="table-text">
-                                                <h6> Lorem ipsum</h6>
-                                                <p>Nullam quis risus eget urna mollis ornare vel eu leo</p>
-                                            </td>
-                                            <td>
-                                                <span class="ur">urgent</span>
-                                            </td>
-                                            <td class="march">
-                                                in 1 days
                                             </td>
 
                                             <td>

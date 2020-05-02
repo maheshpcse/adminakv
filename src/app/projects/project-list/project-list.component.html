@@ -16,31 +16,12 @@
                                 (click)="addProject()">
                                 <i class="fa fa-plus"></i> ADD PROJECT</button></span></h3>
                     <br>
-                    <ul>
+                    <ul *ngFor="let item of academic">
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2>E-DONATOR</h2>
-                            <p> Developed a system to provide to the people need of blood. Using this Blodd Bank system
-                                can search blood group available which they are needed. They can check it online using
-                                our blood bank website.</p>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked>
-                            <i></i>
-                            <h2>TRADEWIN</h2>
-                            <p> Developed online classified site which act as a platform For connecting buyers and
-                                sellers by posting a free ad On their website. It operates as a national online classfie
-                                -ds marketplace for used goods including cars, bikes etc.</p>
-                        </li>
-                        <li>
-                            <input type="checkbox" checked>
-                            <i></i>
-                            <h2>COURSEMAN</h2>
-                            <p> Developed online site for courses such as Full stack, Devops, etc, to easily access by
-                                the students and they can choose whatever they select by choosing the course and getting
-                                courses information easily by this site.
-                            </p>
+                            <h2>{{ item.project_title }}</h2>
+                            <p>{{ item.description }}</p>
                         </li>
                     </ul>
                 </div>
@@ -50,14 +31,12 @@
                                 (click)="addProject()">
                                 <i class="fa fa-plus"></i> ADD PROJECT</button></span></h3>
                     <br>
-                    <ul>
+                    <ul *ngFor="let item of company">
                         <li>
                             <input type="checkbox" checked>
                             <i></i>
-                            <h2>MACHINE HEALTH</h2>
-                            <p> Developed a system to provide to the people need of blood. Using this Blodd Bank system
-                                can search blood group available which they are needed. They can check it online using
-                                our blood bank website.</p>
+                            <h2>{{ item.project_title }}</h2>
+                            <p>{{ item.description }}</p>
                         </li>
                     </ul>
                 </div>

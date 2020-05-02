@@ -1,0 +1,8 @@
+h3 {
+  color: #ff6873;
+  text-transform: uppercase;
+  /* font-size: 36px; */
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}

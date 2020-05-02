@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/auth.service';
 import { SettingsService } from 'src/app/settings.service';
 import { SharedService } from 'src/app/shared.service';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import * as _ from 'underscore';
 declare var $: any;
 
 @Component({
@@ -14,6 +15,8 @@ declare var $: any;
 export class ProjectListComponent implements OnInit {
 
   projects: any = [];
+  academic: any = [];
+  company: any = [];
 
   constructor(
     private router: Router,
@@ -37,6 +40,12 @@ export class ProjectListComponent implements OnInit {
       if(res['success'] == true) {
         console.log('project list', res);
         this.projects = res['data'];
+        this.academic = _.filter(this.projects, (e:any)=>{
+          return e.project_type == 'Academic';
+        });
+        this.company = _.filter(this.projects, (e:any)=>{
+          return e.project_type == 'Company';
+        });
       } else {
         console.log('Unable to get project list');
       }
