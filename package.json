@@ -23,7 +23,7 @@
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
     "jquery": "^3.5.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ng6-toastr-notifications": "^1.0.4",
     "path": "^0.12.7",
     "popper.js": "^1.16.1",
